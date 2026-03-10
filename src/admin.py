@@ -14,7 +14,7 @@ def _next_staff_id(staff_records):
             if num > max_id:
                 max_id = num
     # Increment the largest number found and left-pad with zeros.
-    return f"S{str(max_id + 1).zfill(4)}"
+    return f"S{str(max_id + 1).zfill(1)}"
 
 
 def _create_staff(s):
@@ -25,7 +25,7 @@ def _create_staff(s):
     email = input_email("Staff Email: ")
     password = input("Password (leave blank for default): ").strip()
     if not password:
-        # Use configured default password when user leaves it empty.
+        # Use  default password when user leaves it empty.
         password = s["default_staff_password"]
 
     staff.append(
@@ -64,7 +64,7 @@ def _view_customers(s):
 
 
 def _search_by_id_or_email(s):
-    # Search both staff and customers by ID or email.
+    # Search staff and customers by ID or email.
     value = input_non_empty("Enter ID or Email to search: ")
     staff = load_staff(s)
     customers = load_customers(s)
@@ -85,7 +85,7 @@ def _search_by_id_or_email(s):
 
 
 def admin_menu(s):
-    # Run the admin menu loop until the admin logs out.
+    # Run the admin menu until the admin logs out.
     while True:
         print("\n=== Admin Menu ===")
         print("1. Create Staff Account")

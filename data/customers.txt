@@ -1,3 +1,1 @@
-customer_id|name|email|phone|address|account_no|account_type|balance|password|created_date
-c1|manish dahal|manishdahal123@gmail.com|9842747561|guweshwori|AC000001|S|3000.0|cust123|2026-03-09
-c2|ankit dahal|ankitdahal@gmail.com|9844388533|ramechhap|AC002|S|50000.0|cust123|2026-03-10
+c1|manish|manish@gmail.com|9867392074|ktm|AC001|C|4000.0|cust123|2026-03-11
