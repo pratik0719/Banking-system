@@ -11,10 +11,9 @@ def _parse_date(value):
     except ValueError:
         return None
 
-
 def print_statement(s, account_no, start_date=None, end_date=None):
     # Print account statement for a date range with transaction totals.
-    # Ask for dates interactively when not provided by caller.
+    # customer have to give starting and ending date
     if start_date is None:
         start_date = input_date("Start date (YYYY-MM-DD): ")
     if end_date is None:
@@ -60,7 +59,7 @@ def print_statement(s, account_no, start_date=None, end_date=None):
     print(f"Account Type: {customer.get('account_type')}")
     print(f"Period: {start_date} to {end_date}")
     print("Date       | Type     | Amount  | Balance After | Note")
-    print("-" * 60)
+    print("-" * 60) 
     if not filtered:
         print("No transactions in this period.")
     else:
