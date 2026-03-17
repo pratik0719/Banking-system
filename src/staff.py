@@ -13,7 +13,7 @@ from reports import print_statement
 
 
 def _next_account_no(customers):
-    # Return next account number in the format AC000001, AC000002, ...
+    # Return next account number in the format AC001, AC002, ...
     max_no = 0
     for c in customers:
         # Validate account number format before numeric comparison.
