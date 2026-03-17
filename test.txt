@@ -1,0 +1,36 @@
+WHAT I TESTED
+1. Storage setup creates all required data files:
+   - admins.txt
+   - staff.txt
+   - customers.txt
+   - transactions.txt
+
+2. Default admin is auto-created when admin file is empty:
+   - admin_id = A001
+   - password = admin123
+
+3. Record loader behavior:
+   - skips header row
+   - skips malformed rows with wrong column count
+
+4. Login
+   - finds user by ID or email
+   - matching is case-insensitive
+
+5. Account number generation:
+   - uses highest existing AC number and increments by 1
+
+6. Staff ID generation:
+   - uses highest existing S number and increments by 1
+
+7. Minimum balance helper:
+   - returns savings minimum for account type S
+   - returns current minimum for account type C
+
+8. Customer lookup helper:
+   - returns customer for valid account number
+   - returns None for missing account number
+
+9. Date parsing helper:
+   - accepts valid YYYY-MM-DD date
+   - rejects invalid date strings
